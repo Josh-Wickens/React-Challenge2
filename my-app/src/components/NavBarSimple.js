@@ -13,7 +13,7 @@ class NavBarSimple extends Component {
     }
 
     handleClick() {
-        this.setState((prevState, prevProps) => {
+        this.setState((prevState) => {
             return {
                 message:
                 prevState.message === "Hello, Guest!" ? "Welcome back User!" : "Hello, Guest!",
