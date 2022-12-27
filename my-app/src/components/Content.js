@@ -11,6 +11,7 @@ export class Content extends Component {
 
         this.state = {
             isLoaded: false,
+            posts: [],
         }
     }
 
@@ -18,14 +19,24 @@ export class Content extends Component {
         setTimeout(() => {
             this.setState({
                 isLoaded: true,
+                posts: savedPosts
             })
         }, 2000)
     }
 
+    
+
     render() {
         return (
             <div className={css.Content}>
-                <div className={css.TitleBar}><h1>My Photos</h1></div>
+                <div className={css.TitleBar}>
+                    <h1>My Photos</h1>
+                    <form>
+                        <label>Search</label>
+                        <input type='search' id="searchInput">By Author</input>
+                        <h4>posts found: 100</h4>
+                    </form>
+                    </div>
                 <div className={css.SearchResults}>
                     {this.state.isLoaded ? <PostItem savedPosts={savedPosts} /> : <Loader /> }
                 </div>

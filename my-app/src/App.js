@@ -10,9 +10,9 @@ function App() {
     <div className={css.App}>
       {/* <NavBarSimple /> 
       <NavBarForm />
-      <Sidebar />
-      <Content /> */}
+      <Sidebar />*/}
       <SearchBar />
+      {/* <Content />  */}
     </div>
   );
 }
